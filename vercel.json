@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/main.js"
+    }
+  ],
+  "env": {
+    "SERVER_PORT": "3332",
+    "DB_URL": "postgres://default:oXqGTj14MFQl@ep-patient-smoke-a7tp0szx.ap-southeast-2.aws.neon.tech:5432/verceldb?sslmode=require",
+    "REDIS_URL": "redis://default:UES2jo3vkIfykvkMJH3KShh3Q9ca5NxN@redis-14734.c334.asia-southeast2-1.gce.redns.redis-cloud.com:14734"
+  }
+}
